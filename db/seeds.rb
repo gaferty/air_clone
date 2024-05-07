@@ -7,3 +7,12 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+require 'faker'
+
+(1..3).each  do |x|
+  User.create(id: x ,email: "user#{x}@email.com",password:"password")
+  rand(1..3).times do |y|
+    Venue.create(name: Faker::University.name, location: Faker::Address.full_address, capacity: rand(10..200), venue_type: ['church', 'hall', 'theatre', 'restaurant', 'conference-center', 'Bar'].sample, details: Faker::Lorem.sentence, user_id: x )
+  end
+end
