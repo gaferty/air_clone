@@ -1,0 +1,46 @@
+<div class="container">
+  <h1> Your Bookings</h1>
+  <div class="row">
+    <div class="col-3">
+      <p>Venue</p>
+    </div>
+    <div class="col-3">
+      <p>Dates</p>
+    </div>
+    <div class="col-3">
+      <p>Accepted</p>
+    </div>
+    <div class="col-3">
+      <p>Link to Venue</p>
+    </div>
+  </div>
+  <div class="col">
+    <%@bookings.each do |booking|%>
+
+      <div class="card p-1">
+        <div class="row">
+        <div class="col-3">
+          <div class="card-title">
+            <%= booking.venue.name%>
+          </div>
+        </div>
+        <div class="col-3">
+         <%= booking.start_date%>
+         <%= booking.end_date%>
+        </div>
+        <div class="col-3">
+          <div class="text-right">
+            <%= booking.accepted%>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="text-right">
+            <%= link_to('View Venue', venues_path, class: "btn btn-dark")%>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%end%>
+
+  </div>
+</div>
