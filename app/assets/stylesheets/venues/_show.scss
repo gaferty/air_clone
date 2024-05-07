@@ -1,0 +1,19 @@
+// .row {
+//   background: white;                         /* White background */
+//   padding: 30px;                             /* Internal space */
+//   border-radius: 4px;                        /* Small radius */
+//   box-shadow: 0 10px 30px rgba(0,0,0,.1);    /* Light shadow */
+// }
+
+.container {
+  width: 70%;
+  margin: 10px auto;
+}
+.card-white {
+  background-color: white;
+  padding: 40px;
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+  border-radius: 4px;
+  margin: 20px 0px;
+  text-align: center;
+}
