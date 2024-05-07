@@ -1,1 +1,15 @@
-<h1>This is the index page</h1>
+
+<div class="container-index d-flex">
+  <div class="cards">
+    <% @venues.each do |venue| %>
+      <div class="card row">
+        <h1><%= venue.name %></h1>
+        <p><%= venue.location %></p>
+        <p><%= venue.capacity %></p>
+        <p><%= venue.details %></p>
+        <p><%= venue.available %></p>
+        <%= link_to "View Venue", venue_path(venue), class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>
