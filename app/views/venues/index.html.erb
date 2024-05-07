@@ -1,18 +1,15 @@
-<h1>This is the index page</h1>
 
-
-<ul>
-  <% @venues.each do |venue| %>
-    <li><%= venue.name %></li>
-    <li><%= venue.location %></li>
-    <li><%= venue.capacity %></li>
-    <li><%= venue.details %></li>
-    <li><%= venue.available %></li>
-  <% end %>
-</ul>
-
-
-<h1><%="Name of venue"%></h1>
-<p><%="Location" %></p>
-<p><%="Capacity: 5" %></p>
-<p><%="This venue is located in london and is an old cinima that can be used for lots of cool parties. Previously owned by the queen, it is very beautiful" %></p>
+<div class="container-index d-flex">
+  <div class="cards">
+    <% @venues.each do |venue| %>
+      <div class="card row">
+        <h1><%= venue.name %></h1>
+        <p><%= venue.location %></p>
+        <p><%= venue.capacity %></p>
+        <p><%= venue.details %></p>
+        <p><%= venue.available %></p>
+        <%= link_to "View Venue", venue_path(venue), class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>
