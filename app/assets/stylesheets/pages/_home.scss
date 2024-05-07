@@ -1,1 +1,37 @@
 // Specific CSS for your home-page
+
+.main {
+  margin-top: 0px; /* Add a top margin to avoid content overlay */
+}
+
+.bannerimage img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+}
+
+.text-overlay {
+  position: absolute;
+  top: 30%;
+  left: 40px; /* Adjust the left position as needed */
+  transform: translateY(-50%);
+  color: white;
+  text-align: left; /* Change text alignment to left */
+  z-index: 10; /* Ensure text is above the image */
+}
+
+.text-overlay h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.text-overlay p {
+  font-size: 30px;
+  margin-top: 0;
+}
+
+.container {
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
