@@ -1,0 +1,17 @@
+.container-index {
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-top: 100px;
+  padding-bottom: 60px;
+}
+
+.cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.card {
+  margin: 5px;
+}
