@@ -4,8 +4,8 @@ class CreateVenues < ActiveRecord::Migration[7.1]
       t.string :name
       t.string :location
       t.integer :capacity
-      t.references :users, null: false, foreign_key: true
-      t.string :type
+      t.references :user, null: false, foreign_key: true
+      t.string :venue_type
       t.string :details
       t.boolean :available, default: false
 
