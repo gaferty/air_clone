@@ -1,14 +1,32 @@
-<h1>This is a specific Venue!!!</h1>
-<h1>This is a specific Venue!!!</h1>
-<h1>This is a specific Venue!!!</h1>
+<h1>Venue</h1>
 
-
-
-        <p><%= @venues.name %></p>
+<div class="container">
+      <div class="card-white" id="introduction">
+       <img width="400px" height="200px" src="https://news.airbnb.com/wp-content/uploads/sites/4/2022/09/Newsroom-About.jpg?fit=2500%2C1073">
+        <h1><%= @venues.name %></h1>
         <p><%= @venues.location %></p>
         <p><%= @venues.capacity %></p>
         <p><%= @venues.details %></p>
         <p><%= @venues.available %></p>
+        <%# <%= link_to "Book Venue", venue_path, class: "btn btn-primary" %>
 
 
-        <%= link_to "View Venue", venue_path, class: "btn btn-primary" %>
+        <%= form_with model: @bookings do |l| %>
+        <%= l.label :start_date %>
+        <%= l.text_field :start_date %>
+        <%= l.label :end_date %>
+        <%= l.text_field :end_date %>
+        <%= l.submit %>
+        <% end %>
+
+      </div>
+</div>
+
+
+
+<%# class Booking < ApplicationRecord
+  belongs_to :user
+  belongs_to :venue
+  validates :start_date, presence:true
+  validates :end_date, presence: true, comparison: {greater_than: :start_date}
+end %>
