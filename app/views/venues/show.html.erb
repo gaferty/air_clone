@@ -11,12 +11,10 @@
         <%# <%= link_to "Book Venue", venue_path, class: "btn btn-primary" %>
 
 
-        <%= form_with model: @bookings do |l| %>
-        <%= l.label :start_date %>
-        <%= l.text_field :start_date %>
-        <%= l.label :end_date %>
-        <%= l.text_field :end_date %>
-        <%= l.submit %>
+        <%= simple_form_for [@venues, @booking] do |l| %>
+        <%= l.input :start_date %>
+        <%= l.input :end_date %>
+        <%= l.submit class: "btn btn-flat mt-2"%>
         <% end %>
 
       </div>
