@@ -22,6 +22,25 @@ class VenuesController < ApplicationController
     end
   end
 
+  def edit
+    @venue = Venue.find(params[:id])
+  end
+
+  def update
+    @venue = Venue.find(params[:id])
+    @venue.update(venue_params)
+    if @venue.save
+      redirect_to venue_path(@venue)
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
+  def my_venues
+
+
+  end
+
   private
 
   def venue_params
