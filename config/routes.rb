@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  get 'venues/my_venues', to: 'venues#my_venues'
   resources :venues do
     resources :bookings
   end
