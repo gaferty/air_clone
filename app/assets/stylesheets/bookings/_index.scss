@@ -1,0 +1,40 @@
+.container-booking-index {
+  padding-top: 50px;
+  padding-left: 30px; /* Add left padding */
+  padding-right: 30px; /* Add right padding */
+
+  .card {
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Add shadow */
+    transition: box-shadow 0.3s ease; /* Add smooth transition */
+
+    &:hover {
+      box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+      background-color: #f8f9fa; /* Change background color on hover */
+    }
+
+    .card-title {
+      color: #333;
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+
+    .card-body {
+      padding: 20px;
+
+      .row {
+        align-items: center;
+
+        p {
+          margin-bottom: 0;
+        }
+
+        .btn {
+          width: auto; /* Change width to auto for variable width */
+          max-width: 150px; /* Set maximum width for button */
+        }
+      }
+    }
+  }
+}
