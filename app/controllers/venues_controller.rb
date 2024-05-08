@@ -37,7 +37,7 @@ class VenuesController < ApplicationController
   end
 
   def my_venues
-
+    @venues= Venue.where(user_id: current_user.id)
 
   end
 
