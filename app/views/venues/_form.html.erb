@@ -1,0 +1,11 @@
+<div class="container text-center">
+  <%= simple_form_for venue do |f|%>
+    <%=f.input :name%>
+    <%=f.input :location%>
+    <%=f.input :capacity, input_html: {min: '0'}%>
+    <%=f.input :venue_type%>
+    <%=f.input :details%>
+    <%= f.submit%>
+  <%end%>
+
+</div>
