@@ -5,9 +5,9 @@
 
 <main>
   <div class="card-wrapper">
-     <% @venues.each do |venue| %>
+     <% venues.each do |venue| %>
       <div class="card-index">
-        <%= render "photo", venue: @venues %>
+        <%= render "photo", venue: venue %>
         <div class="card-content">
           <h2>
             <%= venue.name %>
