@@ -1,0 +1,5 @@
+  <% if venue.photo.present? %>
+    <%= cl_image_tag venue.photo.key %>
+  <% else %>
+    <img src="https://source.unsplash.com/random/?movie,theater&<%= venue.name %>" alt="<%= venue.name %>">
+  <% end %>
