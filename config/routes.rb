@@ -14,7 +14,10 @@ Rails.application.routes.draw do
     resources :bookings
   end
 
-  resources :bookings, only: [:index, :destroy]
+  get 'bookings/my_venues',to: 'bookings#my_venues'
+  resources :bookings, only: [:index, :destroy, :show] do
+    post :update_acceptance, on: :member
+  end
 
 
 end

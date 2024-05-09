@@ -3,10 +3,17 @@
     <%=f.input :name%>
     <%=f.input :location%>
     <%=f.input :capacity, input_html: {min: '0'}%>
-    <%=f.input :venue_type%>
+    <%=f.input :venue_type , collection: [['church', "Church"], ['hall', "Hall"], ['theatre',"theatre"], ['restaurant', 'Restaurant'], ['conference-center', 'Conference Center'], ['bar', 'Bar']] , label_method: :second, value_method: :first %>
     <%=f.input :details%>
+<<<<<<< HEAD
+    <div class="d-flex justify-content-center">
+      <%= f.submit class: 'btn btn-dark'%>
+    </div>
+
+=======
     <%= f.input :photo, as: :file %>
     <%= f.submit%>
+>>>>>>> master
   <%end%>
 
 </div>

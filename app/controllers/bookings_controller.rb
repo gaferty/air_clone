@@ -5,7 +5,7 @@ class BookingsController < ApplicationController
   end
 
   def show
-
+    @booking = Booking.find(params[:id])
   end
 
   def new
@@ -18,6 +18,19 @@ class BookingsController < ApplicationController
     @booking.venue = Venue.find(params[:venue_id])
     @booking.save
     redirect_to bookings_path
+  end
+
+  def update_acceptance
+    @booking = Booking.find(params[:id])
+    @booking.update(accepted: !@booking.accepted)
+    @booking.save
+    redirect_to booking_path(@booking)
+  end
+
+  def my_venues
+    @my_venues = Venue.where(user_id: current_user.id)
+    @bookings=Booking.where(venue_id: @my_venues)
+
   end
 
   private
