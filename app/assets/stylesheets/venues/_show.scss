@@ -1,10 +1,3 @@
-// .row {
-//   background: white;                         /* White background */
-//   padding: 30px;                             /* Internal space */
-//   border-radius: 4px;                        /* Small radius */
-//   box-shadow: 0 10px 30px rgba(0,0,0,.1);    /* Light shadow */
-// }
-
 .container {
   max-width: 800px;
   margin: 20px auto;
@@ -21,7 +14,8 @@
 
 .card-white img{
   width: 100%;
-  height: auto;
+  height: 300px;
+  object-fit: cover;
   border-radius: 8px;
   margin-bottom: 20px;
 }
@@ -34,36 +28,18 @@ body{
   color: #333;
 }
 
-
-
 p{
   font-size: 18px;
   margin-bottom: 10px;
 }
 
-.btn{
-  display: inline-block;
-  padding: 12px 24px;
-  font-size: 15px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 5px;
-  border-color: #333;
-  cursor: pointer;
-  background-color: lightgray;
+.card {
+  border: 1px solid #ffffff; /* Add a subtle border */
+  border-radius: 12px; /* Add a nice border radius */
+  transition: all 0.3s ease; /* Add a smooth transition effect */
 }
 
-.btn-flat {
-  background-color: lightgray;
-  color: black;
-  border: 1px solid black;
-}
-
-.btn-flat:hover {
-  background-color: #f5f5f5;
-}
-
-.btn-flat:active {
-  transform: translateY(5px); /* Move button down slightly on click */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Add shadow on click */
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow on hover */
+  transform: translateY(-5px); /* Lift the card slightly on hover */
 }

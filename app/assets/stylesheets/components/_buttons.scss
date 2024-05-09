@@ -1,0 +1,40 @@
+.btn {
+  display: inline-block !important;
+  padding: 12px 24px !important;
+  font-size: 16px !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  border-radius: 25px !important;
+  border: 2px solid #333 !important; /* Dark border */
+  cursor: pointer !important;
+  background-color: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent black background */
+  color: #fff !important; /* White text color */
+  transition: background-color 0.3s ease, color 0.3s ease !important; /* Smooth transition */
+}
+
+/* On white background */
+.btn-on-white {
+  border-color: #ccc !important; /* Lighter border color */
+  color: #737373 !important; /* Darker text color */
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.8) !important; /* Semi-transparent white background on hover */
+  color: #000 !important; /* Black text color on hover */
+}
+
+.btn-flat {
+  background-color: lightgray !important;
+  color: black !important;
+  border: 1px solid black !important;
+}
+
+.btn-flat:hover {
+  background-color: rgba(255, 255, 255, 0.8) !important; /* Semi-transparent white background on hover */
+  color: #000 !important; /* Black text color on hover */
+}
+
+.btn-flat:active {
+  transform: translateY(5px) !important; /* Move button down slightly on click */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1) !important; /* Add shadow on click */
+}
