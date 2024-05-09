@@ -1,0 +1,46 @@
+
+<div class="container-booking-index">
+  <h1><%= title%></h1>
+  <div class="row">
+    <div class="col-3">
+      <p>Venue</p>
+    </div>
+    <div class="col-3">
+      <p>Dates</p>
+    </div>
+    <div class="col-3">
+      <p>Status</p>
+    </div>
+    <div class="col-3 d-flex justify-content-end">
+    </div>
+  </div>
+
+  <div class="row">
+    <% bookings.each do |booking| %>
+      <div class="col-12 mb-3">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-3">
+                <h5 class="card-title"><%= booking.venue.name %></h5>
+              </div>
+              <div class="col-3">
+                <p><%= booking.start_date %> - <%= booking.end_date %></p>
+              </div>
+              <div class="col-3">
+                <% if booking.accepted %>
+                  <p class="text-success">Accepted</p>
+                <% else %>
+                  <p class="text-danger">Pending</p>
+                <% end %>
+              </div>
+              <div class="col-3 d-flex justify-content-end"> <!-- Adjusted column for View Venue button -->
+                <a href="<%= booking_path(booking) %>" class="btn btn-primary">View Venue</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
