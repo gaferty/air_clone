@@ -3,6 +3,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:wght@300&display=swap" rel="stylesheet">
 <link rel="../../assets/stylesheets/venues/_index.scss" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
+<div class="container text-center">
+  <h1>Available Movie Theaters</h1>
+</div>
+
 <main>
   <div class="card-wrapper">
      <% @venues.each do |venue| %>
@@ -13,7 +17,7 @@
             <%= venue.name %>
           </h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Scing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Ut enim ad minim veniam, quis.
           </p>
           <a href="#" class="button">
             <%= link_to "View Venue", venue_path(venue), class: "btn btn-primary" %>
