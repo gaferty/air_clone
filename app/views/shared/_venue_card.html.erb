@@ -11,9 +11,9 @@
         </p>
         <p> <strong>Until : </strong> <%= render 'shared/date_format', date: booking.end_date%></p>
         <% if booking.accepted%>
-          <p> Booking Accepted</p>
+          <h3 class ='text-success'> Booking Accepted</h3>
         <%else%>
-          <p>Booking Pending</p>
+          <h3 class ='text-warning'>Booking Pending</h3>
         <%end%>
       </div>
 </div>
