@@ -9,18 +9,8 @@
   height: auto; /* Maintain aspect ratio */
 }
 
-.text-overlay {
-  position: absolute;
-  top: 30%;
-  left: 40px; /* Adjust the left position as needed */
-  transform: translateY(-50%);
-  color: white;
-  text-align: left; /* Change text alignment to left */
-  z-index: 10; /* Ensure text is above the image */
-}
-
 .text-overlay h1 {
-  font-size: 50px;
+  font-size: 70px;
   margin-bottom: 10px;
 }
 
@@ -34,4 +24,24 @@
   padding-left: 40px;
   padding-top: 40px;
   padding-bottom: 60px;
+}
+
+.bannerimage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity by changing the last value (0.5) */
+}
+
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: white;
 }
