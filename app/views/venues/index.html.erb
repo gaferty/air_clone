@@ -11,8 +11,8 @@
   <div class="card-wrapper">
      <% @venues.each do |venue| %>
       <div class="card-index">
-        <img src="https://source.unsplash.com/random/?movie,theater&<%= venue.name %>" alt="<%= venue.name %>">
-        <div class="card-content">
+        <%= render "photo", venue: venue%>
+       <div class="card-content">
           <h2>
             <%= venue.name %>
           </h2>

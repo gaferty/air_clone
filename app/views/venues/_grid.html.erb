@@ -12,7 +12,7 @@
      <% @venues.each do |venue| %>
 >>>>>>> 24ab6b0359587e66291418b605edf31344d32fa0
       <div class="card-index">
-        <img src="https://source.unsplash.com/random/?movie,theater&<%= venue.name %>" alt="<%= venue.name %>">
+        <%= render "photo", venue: @venues %>
         <div class="card-content">
           <h2>
             <%= venue.name %>
