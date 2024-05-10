@@ -2,4 +2,14 @@
   <h1>My Venue's</h1>
 </div>
 
+<div class="container-wide">
+  <div class="d-flex align-items-center justify-content-between p-3 my-3 text-white bg-purple rounded shadow-sm">
+    <div class="lh-1">
+      <h1 class="h6 mb-0 text-white lh-1"><strong>Got a cool Venue?</strong></h1>
+      <small> Why not list it on our site for free and get awsome people booking it for their amazing events! </small>
+    </div>
+    <%= link_to "List a Venue", new_venue_path, class: 'btn btn-primary' %>
+  </div>
+</div>
+
 <%= render 'grid', venues: @venues %>

@@ -1,0 +1,39 @@
+.container-wide {
+  width: 1300px; /* Adjust as needed */
+  margin: 0 auto;
+}
+
+.bg-purple {
+  background-color: #c1c1c1;
+}
+.rounded {
+  border-radius: 15px !important;
+}
+.text-white {
+  --bs-text-opacity: 1;
+  color: black !important;
+}
+.p-3 {
+  padding: 1rem !important;
+}
+.my-3 {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+.align-items-center {
+  align-items: center !important;
+}
+.shadow-sm {
+  box-shadow: var(--bs-box-shadow-sm) !important;
+}
+.d-flex {
+  display: flex !important;
+}
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+user agent stylesheet
+div {
+  display: block;
+  unicode-bidi: isolate;
+}
