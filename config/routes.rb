@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   # root "posts#index"
   get 'venues/my_venues', to: 'venues#my_venues'
   resources :venues do
+    post :list, on: :member
     resources :bookings
     resources :reviews
   end

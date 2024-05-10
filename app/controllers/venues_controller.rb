@@ -42,6 +42,13 @@ class VenuesController < ApplicationController
 
   end
 
+  def list
+    @venue = Venue.find(params[:id])
+    @venue.update(available: !@venue.available)
+    @venue.save
+    redirect_to venue_path(@venue)
+  end
+
   private
 
   def venue_params
