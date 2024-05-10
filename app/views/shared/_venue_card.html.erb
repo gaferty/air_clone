@@ -2,9 +2,9 @@
       <div class="card-white" id="introduction">
         <%= render 'venues/photo' , venue: booking.venue%>
         <h1><%=booking.venue.name%></h1>
-        <p><%= booking.venue.location %></p>
-        <p><%= booking.venue.capacity %></p>
-        <p><%= booking.venue.details %></p>
+        <p><strong>Address:</strong><%= booking.venue.location %></p>
+        <p><strong>Capacity:</strong><%= booking.venue.capacity %></p>
+        <p><strong>Details:</strong><%= booking.venue.details %></p>
         <%# <%= link_to "Book Venue", venue_path, class: "btn btn-primary" %>
         <p> <strong> From :</strong>
          <%= render 'shared/date_format', date: booking.start_date%>
