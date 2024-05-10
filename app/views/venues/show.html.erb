@@ -52,11 +52,11 @@
             <%if @venues.available%>
               <%= button_to "Unlist Venue", list_venue_path, class:"btn btn-dark "%>
               <%= link_to "Remove Venue", venue_path(@venues), data:{turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-dark  "%>
-             <%= link_to "Back", :back, class: "btn btn-dark" %>
+             <%= link_to "Back", venues_my_venues_path, class: "btn btn-dark" %>
             <%else%>
               <%= button_to "List Venue", list_venue_path, class:"btn btn-dark "%>
               <%= link_to "Remove Venue", venue_path(@venues), data:{turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-dark "  %>
-              <%= link_to "Back", :back, class: "btn btn-dark" %>
+              <%= link_to "Back", venues_my_venues_path, class: "btn btn-dark" %>
             <%end%>
 
 
@@ -73,7 +73,7 @@
 
                         </div>
                             <div class="d-flex justify-content-evenly mt-4">
-                                <%= link_to "Back", :back, class: "btn btn-secondary mx-3" %>
+                                <%= link_to "Back", venues_my_venues_path, class: "btn btn-secondary mx-3" %>
                                 <%= l.submit "Create Booking", class: "btn btn-flat mx-3" %>
                             </div>
                         <% end %>

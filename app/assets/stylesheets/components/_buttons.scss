@@ -38,3 +38,22 @@
   transform: translateY(5px) !important; /* Move button down slightly on click */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1) !important; /* Add shadow on click */
 }
+
+.btn-orange {
+  display: inline-block !important;
+  padding: 12px 24px !important;
+  font-size: 16px !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  border-radius: 25px !important;
+  border: 2px solid #333 !important; /* Dark border */
+  cursor: pointer !important;
+  background-color: rgba(255, 166, 0, 0.804) !important; /* Semi-transparent black background */
+  color: #fff !important; /* White text color */
+  transition: background-color 0.3s ease, color 0.3s ease !important; /* Smooth transition */
+}
+
+.btn-orange:hover {
+  background-color: rgba(255, 255, 255, 0.8) !important; /* Semi-transparent white background on hover */
+  color: #535353 !important; /* Black text color on hover */
+}
