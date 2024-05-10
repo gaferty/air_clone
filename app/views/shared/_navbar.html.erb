@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
+    <%= link_to "", class: "navbar-brand" do %>
       <%= image_tag "logo2.png", style: "width: 120px;" %>
     <% end %>
 
@@ -36,6 +36,9 @@
             </div>
           </li>
         <% else %>
+          <li class="nav-item">
+            <%= link_to "Venues", venues_path, class: "nav-link" %>
+          </li>
           <li class="nav-item">
             <%= link_to "Login", new_user_session_path, class: "nav-link" %>
           </li>
