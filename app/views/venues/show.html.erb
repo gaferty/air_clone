@@ -53,7 +53,7 @@
               <%= button_to "List Venue", list_venue_path, class:"btn btn-dark "%>
             <%end%>
 
-            <%= link_to "Remove Venue", venue_booking_path(@venues), data:{turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-light"  %>
+            <%= link_to "Remove Venue", venue_path(@venues), data:{turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-light"  %>
 
            </div>
            <%else%>

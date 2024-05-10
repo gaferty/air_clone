@@ -52,7 +52,7 @@ class VenuesController < ApplicationController
   def destroy
     @venue = Venue.find(params[:id])
     @venue.destroy
-    redirect_to venues_my_venues
+    redirect_to venues_my_venues_path
   end
 
   private
