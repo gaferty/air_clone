@@ -1,0 +1,9 @@
+<%# This partial should render the rating stars based on the provided rating value %>
+<% stars_count = rating %>
+<% (1..5).each do |i| %>
+  <% if i <= stars_count %>
+    <%= image_tag('https://www.shareicon.net/data/256x256/2015/10/02/650094_empty_512x512.png', class: 'star-icon-review') %>
+  <% else %>
+    <%= image_tag('star-empty.png', class: 'star-icon-review') %>
+  <% end %>
+<% end %>

@@ -5,6 +5,7 @@ class CreateReviews < ActiveRecord::Migration[7.1]
       t.references :venue, null: false, foreign_key: true
       t.string :comments
       t.integer :rating
+      t.boolean :recommendation
 
       t.timestamps
     end
