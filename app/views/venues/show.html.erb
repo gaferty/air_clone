@@ -43,17 +43,33 @@
             </div>
 
             <!-- Booking form -->
-            <div class="row mt-3">
-                <div class="col">
-                    <%= simple_form_for [@venues, @booking], html: { class: "mb-2" } do |l| %>
-                        <%= l.input :start_date %>
-                        <%= l.input :end_date %>
-                        <div class="d-flex justify-content-between">
-                            <%= link_to "Back", :back, class: "btn btn-secondary mt-2" %>
-                            <%= l.submit "Create Booking", class: "btn btn-flat mt-2" %>
-                        </div>
-                    <% end %>
-                </div>
+           <!--<%= render 'booking_form', venues:@venue, booking:@booking%> -->
+           <%if @venues.user == current_user%>
+
+           <div class="d-flex justify-content-around mt-3">
+            <%if @venues.available%>
+              <%= button_to "Unlist Venue", list_venue_path, class:"btn btn-dark "%>
+            <%else%>
+              <%= button_to "List Venue", list_venue_path, class:"btn btn-dark "%>
+            <%end%>
+
+            <%= link_to "Remove Venue", venue_booking_path(@venues), data:{turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-light"  %>
+
+           </div>
+           <%else%>
+              <div class="row mt-3">
+                  <div class="col">
+                      <%= simple_form_for [@venues, @booking], html: { class: "mb-2" } do |l| %>
+                          <%= l.input :start_date %>
+                          <%= l.input :end_date %>
+                          <div class="d-flex justify-content-between">
+                              <%= link_to "Back", :back, class: "btn btn-secondary mt-2" %>
+                              <%= l.submit "Create Booking", class: "btn btn-flat mt-2" %>
+                          </div>
+                      <% end %>
+                  </div>
+              </div>
+           <%end%>
             </div>
         </div>
     </div>
