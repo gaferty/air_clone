@@ -60,11 +60,14 @@
               <div class="row mt-3">
                   <div class="col">
                       <%= simple_form_for [@venues, @booking], html: { class: "mb-2" } do |l| %>
-                          <%= l.input :start_date %>
-                          <%= l.input :end_date %>
-                          <div class="d-flex justify-content-between">
-                              <%= link_to "Back", :back, class: "btn btn-secondary mt-2" %>
-                              <%= l.submit "Create Booking", class: "btn btn-flat mt-2" %>
+                      <div class="d-flex justify-content-evenly">
+                          <%= l.input :start_date, as: :string, input_html:{data:{controller:'datepicker'}} %>
+                          <%= l.input :end_date, as: :string, input_html:{data:{controller:'datepicker'}} %>
+
+                      </div>
+                          <div class="d-flex justify-content-evenly mt-4">
+                              <%= link_to "Back", :back, class: "btn btn-secondary mx-3" %>
+                              <%= l.submit "Create Booking", class: "btn btn-flat mx-3" %>
                           </div>
                       <% end %>
                   </div>
