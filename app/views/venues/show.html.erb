@@ -45,11 +45,17 @@
             <!-- Booking form -->
            <!--<%= render 'booking_form', venues:@venue, booking:@booking%> -->
            <%if @venues.user == current_user%>
+
+           <div class="d-flex justify-content-around mt-3">
             <%if @venues.available%>
-              <%= button_to "Unlist Venue", list_venue_path, class:"btn btn-dark mt-3"%>
+              <%= button_to "Unlist Venue", list_venue_path, class:"btn btn-dark "%>
             <%else%>
-              <%= button_to "List Venue", list_venue_path, class:"btn btn-dark mt-3"%>
+              <%= button_to "List Venue", list_venue_path, class:"btn btn-dark "%>
             <%end%>
+
+            <%= link_to "Remove Venue", venue_booking_path(@venues), data:{turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-light"  %>
+
+           </div>
            <%else%>
               <div class="row mt-3">
                   <div class="col">
