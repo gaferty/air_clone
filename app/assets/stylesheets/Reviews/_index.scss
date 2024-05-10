@@ -6,7 +6,7 @@ body {
   padding: 0;
 }
 
-.container {
+.container-review {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
@@ -52,10 +52,10 @@ h1 {
   padding-top: 10px;
 }
 
-form {
-  text-align: left;
-  margin-top: 40px;
-}
+// form-review {
+//   text-align: left;
+//   margin-top: 40px;
+// }
 
 .form-group {
   margin-bottom: 20px;
@@ -72,17 +72,16 @@ textarea {
   border-radius: 4px;
   resize: vertical;
 }
+// .btn {
+//   padding: 10px 20px;
+//   font-size: 16px;
+//   background-color: #007bff;
+//   color: #fff;
+//   border: none;
+//   border-radius: 4px;
+//   cursor: pointer;
+// }
 
-.btn {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background-color: #0056b3;
-}
+// .btn:hover {
+//   background-color: #0056b3;
+// }

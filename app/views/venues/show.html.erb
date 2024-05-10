@@ -1,10 +1,12 @@
 <div class="container">
     <div class="card-white" id="introduction">
         <!-- Render a partial named "photo" and pass the @venues object to it -->
+
         <%= render "photo", venue: @venues %>
 
         <!-- Main card content -->
         <div class="card-content">
+          <h2><%=@venues.name%></h2>
             <!-- Venue information cards -->
             <div class="row">
                 <!-- Capacity card -->
@@ -49,11 +51,15 @@
            <div class="d-flex justify-content-around mt-3">
             <%if @venues.available%>
               <%= button_to "Unlist Venue", list_venue_path, class:"btn btn-dark "%>
+              <%= link_to "Remove Venue", venue_path(@venues), data:{turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-dark  "%>
+             <%= link_to "Back", :back, class: "btn btn-dark" %>
             <%else%>
               <%= button_to "List Venue", list_venue_path, class:"btn btn-dark "%>
+              <%= link_to "Remove Venue", venue_path(@venues), data:{turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-dark "  %>
+              <%= link_to "Back", :back, class: "btn btn-dark" %>
             <%end%>
 
-            <%= link_to "Remove Venue", venue_path(@venues), data:{turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-light"  %>
+
 
            </div>
            <%else%>
@@ -79,3 +85,6 @@
         </div>
     </div>
 </div>
+
+
+<%=render 'reviews/review'%>
