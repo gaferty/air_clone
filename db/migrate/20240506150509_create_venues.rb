@@ -8,8 +8,8 @@ class CreateVenues < ActiveRecord::Migration[7.1]
       t.string :venue_type
       t.string :details
       t.boolean :available, default: false
-      t.float :longitude
-      t.float :latitude
+      # t.float :longitude
+      # t.float :latitude
       t.timestamps
     end
   end
