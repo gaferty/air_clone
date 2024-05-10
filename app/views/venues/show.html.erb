@@ -1,7 +1,7 @@
 <div class="container">
     <div class="card-white" id="introduction">
         <!-- Render a partial named "photo" and pass the @venues object to it -->
-
+        <h2 class="text-center"><%= @venues.name %></h2>
         <%= render "photo", venue: @venues %>
 
         <!-- Main card content -->
