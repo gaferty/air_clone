@@ -5,4 +5,5 @@ class Venue < ApplicationRecord
   validates :location, presence: true, uniqueness: {scope: :name, message: "You already have a venue with this name at this location"}
   validates :name, presence:true
   has_one_attached :photo
+  has_many :reviews
 end
