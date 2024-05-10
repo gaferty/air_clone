@@ -45,7 +45,11 @@
             <!-- Booking form -->
            <!--<%= render 'booking_form', venues:@venue, booking:@booking%> -->
            <%if @venues.user == current_user%>
+            <%if @venues.available%>
+              <%= button_to "Unlist Venue", list_venue_path, class:"btn btn-dark mt-3"%>
+            <%else%>
               <%= button_to "List Venue", list_venue_path, class:"btn btn-dark mt-3"%>
+            <%end%>
            <%else%>
               <div class="row mt-3">
                   <div class="col">
